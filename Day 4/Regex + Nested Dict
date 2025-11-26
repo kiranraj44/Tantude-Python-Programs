@@ -1,0 +1,11 @@
+import re
+d={}
+pattern=r'User:\s*(\w+)\s*IP:\s*([\d\.]+)'
+x=input("Enter the text: ")
+n=re.findall(pattern,x)
+for user,ip in n:
+    if user not in d:
+        d[user]=[]
+    if ip not in d[user]:
+        d[user].append(ip)
+print(d)
