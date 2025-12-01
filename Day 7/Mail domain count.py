@@ -1,0 +1,8 @@
+import re
+d={}
+x=input("Enter the text: ")
+pattern=r'@([\w.-]+)'
+n=re.findall(pattern,x)
+for i in n:
+    d[i]=d.get(i,0)+1
+print(d)
